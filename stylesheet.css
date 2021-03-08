@@ -628,3 +628,18 @@
   footer a:hover {
     color: white;
   }
+
+.footer-menu img {
+  width: 60px;
+  height: 20px;
+}
+
+.footer-menu img:last-child {
+  display: none;  
+}
+.footer-menu:hover img:last-child {
+  display: block;  
+}
+.footer-menu:hover img:first-child {
+  display: none;  
+}
