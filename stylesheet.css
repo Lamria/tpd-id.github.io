@@ -116,7 +116,7 @@
   .page-container {  
     min-height: 100vh;
   }
-
+/*-----------------------------index.html--*/
   .home-content {
     color: white;
   }
@@ -195,7 +195,7 @@
     min-height: 100vh;
     width: 100%;
     padding: 50px 20px 20px 20px;
-    margin: 88px 10px 50px 0;
+    margin: 88px 10px 70px 0;
     font-family: Candara, sans-serif;
     background-color: #999999;
   }
@@ -275,48 +275,7 @@
   margin-top: 10px;
 }
 
-  /* -----------------ourservices.html*/
-
-  .services-item {
-    display: flex;
-    justify-content: left;
-    margin-left: 20px;
-  }
-
-  .image-services-item {
-    width: 350px;
-    height: 300px;
-    padding: 50px 5px 5px 100px;
-    
-  }
-  .image-services-item img {
-    border-radius: 10px;
-    border: 2px solid red;
-  }
-
-  .icon-services {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .title-services {
-    display: flex;
-    padding: 100px 100px 0 20px;
-    flex: 1;
-  }
-
-  .title-services h3 {
-    color: #999999;
-    font-size: 1.8em;
-  }
-
-  .content-service {
-    font-size: 1.2em;
-  }
-
-  /*--------------------------- begin about.html */
+   /*--------------------------- begin about.html */
 
   .pagesimage {
     background-image: url("images/tpdbgred1.png");
@@ -360,7 +319,7 @@
   .title-values {
     display: flex;
     padding: 100px 200px 0 20px;
-    flex: 1;
+    /*flex: 1;*/
   }
 
   .title-values h3 {
