@@ -47,7 +47,7 @@
 
 
   .nav-list img {
-  width: 75px;
+  width: 90px;
   height: 30px;
 }
 
@@ -268,7 +268,7 @@
 
 
 .title-text {
-  color: red;
+  color: white;
   font-size: 25px;
   text-align: center;
   line-height: 20px;
@@ -319,7 +319,7 @@
   .title-values {
     display: flex;
     padding: 100px 200px 0 20px;
-    /*flex: 1;*/
+    flex: 1;
   }
 
   .title-values h3 {
