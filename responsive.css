@@ -1,7 +1,8 @@
 @media (max-width: 1000px) {
 	
 	.container-services {
-		min-height: 200vh;
+		min-height: 100vh;
+		margin-top:  20px;
 	}
 	.content { 
 		width: 50%;
@@ -22,6 +23,9 @@
 		display: inline-block;
 	}
 
+	.gallery-wrapper {
+    margin-bottom: 30px;
+  }
 
 
 @media (max-width: 800px) {

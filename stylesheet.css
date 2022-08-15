@@ -13,7 +13,7 @@
   }
 
   .home {
-      background-image: url("images/about1.png"); 
+      background-image: url("images/frontpage.png"); 
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -22,12 +22,6 @@
          
   }
 
-  /*.pageimage-home {
-    background-image: url("images/about.png");
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-  }*/
   
   /*-------------------------------------navbar*/
   
@@ -123,7 +117,8 @@
   .page-container {  
     min-height: 100vh;
   }
-/*-----------------------------index.html--*/
+
+/*=======================index.html===*/
   .home-content {
     color: white;
     /*background-color: #999999;*/
@@ -201,107 +196,11 @@
     align-items: center;
   }
 
-/*=========================carousel*/
-
-.carousel-wrap {
-  background-color: rgba(88, 24, 69, 0.5);
-  height: 100vh;
-  /*align-items: center;*/
-  margin-top: 50px;
-}
-
-.carousel-wrap .heading {
-    margin-top:  50px;
-    padding: 5px 0 10px 0;
-    text-align: center;
-  }
-
-.carousel {
-  position:relative;
-  width:400px;
-  border:10px solid white;
-  margin:20px auto;
-  box-shadow:0px 0px 40px #000;
   
-}
-
-.carousel > img {
-  display:none;
-  width:100%;
-}
-
-.carousel > input {
-  position:absolute;
-  left:-9999px;
-}
-.carousel > input:checked + label + img {
-  display:block;
-}
-
-.carousel > label,
-.carousel > input:checked ~ label ~ label ~ label ~ label {
-  display:none;
-}
-.carousel > input:checked + label {
-  display:block;
-  left:0;
-}
-.carousel > input:checked ~ label ~ label ~ label {
-  display:block;
-  right:0;
-}
-
-.carousel > label {
-  position:absolute;
-  top:0;
-  width:25%;
-  height:100%;
-  visibility:hidden;
-}
-.carousel > label:before {
-  content:'';
-  display:block;
-  position:absolute;
-  width:100%;
-  height:100%;
-  visibility:visible;
-}
-.carousel > label:after {
-  display:block;
-  position:absolute;
-  top:50%;
-  width:25px;
-  height:25px;
-  line-height:22px;
-  margin:-15px 10px 0 10px;
-  background-color:black;
-  color:white;
-  font-family:'Arial';
-  font-weight:bold;
-  font-size:18px;
-  text-align:center;
-  visibility:hidden;
-  border:2px solid white;
-  border-radius:20px;
-  box-shadow:0 3px 4px black;
-}
-.carousel > label:hover:after {
-  visibility:visible;
-}
-
-.carousel > input:checked + label:after {
-  left:0;
-  content:'\00AB';
-}
-.carousel > input:checked ~ label ~ label ~ label:after {
-  right:0;
-  content:'\00BB';
-}
-
-
-/*--endcarousel--*/
+      /*----------------ourservices*/
 
   .container-services {
+    background: #E3E3E3;
     min-height: 100vh;
     width: 100%;
    /*padding: 50px 20px 20px 20px;
@@ -367,6 +266,18 @@
     
 }
 
+.service-item a:link {
+  color: gray;
+}
+
+.service-item a:visited {
+  color: grey;
+}
+
+.service-item a:hover {
+  color: red;
+}
+
  .image-service-item {
   display: flex;
   flex-wrap: nowrap;
@@ -377,8 +288,7 @@
   padding: 5px;
   background-size: cover;
   background-position: center center;
-  /*flex: 1;
-  position: absolute;*/
+  
 }
 
  .icon-service {
@@ -386,6 +296,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /*border-radius: 50%;*/
 }
 
 
@@ -394,62 +305,238 @@
   color: white;
   font-size: 25px;
   font-weight: bolder;
-  /*text-align: center;*/
   line-height: 20px;
-  bottom: 10px;
+  bottom: 5px;
   z-index: 3;
   }
 
-  .happy-clients-wrap {
-  background-color: #cbc0c0;
-  width: 100%;
-  height: 400px;
-  margin-top: 50px;
-}
+        /*------------------slider gallery--------*/
 
-  .logolist-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+ .gallery-wrapper {
+    background: white;
+    /*height: 100vh;*/
   }
 
-  .imagelogo-wrap {
-    background-color: white ;
+  .gallery {
+   align-items: center;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    width: 150px;
-    height:150px;
-   margin: 5px;
-   padding: 5px;
-    flex: 1 ;
-  
 }
 
-.image-logo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+@-webkit-keyframes scroll {
+0% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+100% {
+-webkit-transform: translateX(calc(-400px * 14));
+transform: translateX(calc(-400px * 14));
+}
 }
 
-  .sliders {
-    min-height: 100vh;
+@keyframes scroll {
+0% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+100% {
+-webkit-transform: translateX(calc(-400px * 14));
+transform: translateX(calc(-400px * 14));
+}
+}
+
+.slider {
+  background: pr;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1300px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 300px;
+  position: absolute;
+  width: 400px;
+  z-index: 2;
+}
+
+.galleries {
+  height: 300px;
+  width: 550px;
+  padding: 0 5px 0 5px;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+-webkit-transform: rotateZ(180deg);
+transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(400px * 14);
+}
+.slider .slide {
+  height: 300px;
+  width: 600px;
+}
+
+
+
+
+/*carousel-begin*/
+
+.testimonies-wrapper {
+    /*position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);*/
+    margin-top: 26px;
+    
+}
+
+.carousel {
+  background-color: lightgrey;
+  margin-top: 26px;
+}
+
+
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
     width: 100%;
-    padding: 0 20px 40px 20px;
-    margin: 80px 10px 70px 0;
-    font-family: Candara, sans-serif;
-    /*background-color: #BDB9B8;*/
-  }
+    background-color: lightgrey;
+    margin-bottom: 50px;
+    
+}
 
-  .sliders .heading {
-    padding: 10px 0 10px 0;
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    
+}
+
+
+
+.testimony {
     text-align: center;
-   }
+    font-family: Candara, sans-serif;
+    font-size: 1.3em;
+    padding: 40px 60px 0 60px;
+    margin: 0 10px;
 
-   /*--------------------------- begin about.html */
+}
+
+.the_client {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+    
+.logo-client img {
+    /*height: 100px;*/
+    width: 90px;
+    object-fit: contain;
+    justify-content: start;
+    
+}
+
+.training-name {
+ font-family: candara, sans-serif;
+ font-size: 0.8em;
+ margin: 15px 0 0 5px;
+ width:  200px;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+label.carousel-control {
+    padding: 0 0;
+ }
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+
+/*end-carousel*/
+
+   /*=================================begin about.html==========*/
 
   .pagesimage-about {
     background-image: url("images/about.png");
@@ -468,12 +555,7 @@
 
 
 .who_weare {
-  /*display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;*/
-    margin: 0 0 25px 50px;
+  margin: 0 0 25px 50px;
 }
 
 .who_arenarrative {
@@ -652,7 +734,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
   }
   
 
@@ -696,6 +778,43 @@
   .expert {
     font-size: 1.1em;
   }
+
+
+/*-----------------------clients.html*/
+
+.pagesimage_clients {
+    background-image: url("images/clientbg.png");
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+
+  .heading-expert {
+    font-size: 1.8em;
+    padding: 20px;
+  }
+
+  .clients-container {
+    width:  100%;
+    height: 100vh;
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+
+     
+  .image-clients-item {
+    width:  100%;
+    height: 500px;
+    padding: 5px;
+  }
+
+  .icon-trainings {
+    width:  100%;
+    height: 100%;
+    padding: 5px;
+  }
+
 
 /*-------------------------feature.html*/
 
@@ -794,81 +913,6 @@
     font-size: 1em;
   }
 
-@keyframes slide {
-  0%{
-    left: 0;
-  }
-  5.9%{
-    left: 0;
-  }
-  11.8%{
-    left: -100%;
-  }
-  17.7%{
-    left: -100%;
-  }
-  23.6%{
-    left: -200%;
-  }
-  29.5%{
-    left: -200%;
-  }
-  35.4%{
-    left: -300%;
-  }
-  41.3%{
-    left:  -300%;
-  }
-  47.2%{
-    left: -400%;
-  }
-  53.1%{
-    left: -400%;
-  }
-  59%{
-    left:  -500%;
-  }
-  64.9%{
-    left: -500%;
-  }
-  70.8%{
-    left: -600%;
-  }
-  76.7%{
-    left: -600%;
-  }
-  82.6%{
-    left: -700%;
-  }
-  88.5%{
-    left: -700%;
-  }
-  
-  100%{
-    left: 0;
-  }
-}
-
-#slider {
-  overflow: hidden;
-  width:  500px;
-  height:  auto;
-  margin-bottom: 50px;
-  margin:  0 auto;
-}
-
-#slider figure img {
-  float:  left;
-  width:  12.5%;
-}
-
-#slider figure {
-  position:  relative;
-  margin-top:  50px;
-  width:  800%;
-  height:  100%;
-  animation: slide 30s infinite;
-}
 
 
   /*-----------------------contact.html*/
