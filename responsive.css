@@ -312,13 +312,36 @@ footer {
 
 /*--------------------------- begin about.html */
 
-	.values-narrative {
+.who_are {
+   margin:  20px 0 0 10px;
+  }
+
+
+.who_weare {
+  margin: 0 0 25px 5px;
+}
+
+.who_arenarrative {
+  padding:  0 20px 50px 0;
+  margin-left: 30px;
+}
+
+
+.values-narrative {
     font-size: 1.2em;
     padding-left: 50px;
     margin: 50px 0 30px 0;
 }
 
 /*----------------------------ourservice.html*/
+.services1-item {
+    width: 100%;
+  }
+
+
+
+
+
 .image-services-item {
     
     padding: 0 50px 0 1px;
