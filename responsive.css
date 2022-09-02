@@ -273,6 +273,10 @@
     margin: 50px 10px 10px 10px;
   }
 
+.target-list {
+    margin: 30px 0 90px 50px;
+  }
+
 .container-services {
 	min-height: 230vh;
 	}
@@ -338,21 +342,14 @@ footer {
     width: 100%;
   }
 
-
-
-
-
 .image-services-item {
-    
-    padding: 0 50px 0 1px;
-    
-  }
+   padding: 0 50px 0 1px;
+ }
 
 
 .title-services {
-    padding: 0 70px 0 30px;
-      
-  }
+    padding: 0 40px 0 0;
+ }
 
 
 /*--------------------------- begin clients.html */
